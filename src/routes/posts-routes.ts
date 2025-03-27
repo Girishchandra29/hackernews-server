@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { tokenMiddleware } from "./middlewares/token-middleware";
+import { tokenMiddleware } from "./middleware/token-middleware";
 import { getAllPosts, getMePosts } from "../controllers/posts/posts-controller";
 
 export const postsRoutes = new Hono();
