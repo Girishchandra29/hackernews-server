@@ -1,5 +1,5 @@
-import { prismaClient } from "../../extras/prisma";
-import type { getPostsResult } from "./posts-types";
+import { prismaClient } from "../../extras/prisma.js";
+import type { getPostsResult } from "./posts-types.js";
 
 export const getMePosts = async (parameters: {
   userId: string;
