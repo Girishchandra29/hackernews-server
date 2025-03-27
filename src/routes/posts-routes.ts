@@ -4,10 +4,10 @@ import { getAllPosts, getMePosts } from "../controllers/posts/posts-controller";
 
 export const postsRoutes = new Hono();
 
-postsRoutes.get("/me",tokenMiddleware, async (context) => {
-  const userId = context.get("userId");
+postsRoutes.get("/me", tokenMiddleware, async (context) => {
+  const userId = context.get("userId") as string;
   try{
-    const userPosts = await getMePosts({ userId});
+    const userPosts = await getMePosts({ userId: userId as string });
 
     return context.json({
       data : userPosts,
